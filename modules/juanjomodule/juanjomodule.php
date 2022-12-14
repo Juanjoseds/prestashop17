@@ -50,7 +50,7 @@ class Juanjomodule extends Module
         $this->displayName = $this->l('Juanjo Test Module');
         $this->description = $this->l('Este es mi primer módulo de pruebas');
 
-        $this->confirmUninstall = $this->l('');
+        $this->confirmUninstall = $this->l('¿Está seguro que deseas desinstalar el módulo?');
 
         $this->ps_versions_compliancy = array('min' => '1.6', 'max' => _PS_VERSION_);
     }
