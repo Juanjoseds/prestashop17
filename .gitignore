@@ -1,2 +1,13 @@
 .idea
 /var/cache
+/cache/*
+/img/tmp
+
+/admin*/autoupgrade/*
+/admin*/backups/*
+
+/admin*/import/*
+!/admin*/import/.htaccess
+!/admin*/import/index.php
+
+themes/*/cache/*

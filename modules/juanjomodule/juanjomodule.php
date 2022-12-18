@@ -24,6 +24,8 @@
 *  International Registered Trademark & Property of PrestaShop SA
 */
 
+use PrestaShopBundle\Controller\Admin\Sell\Order\ActionsBarButton;
+
 if (!defined('_PS_VERSION_')) {
     exit;
 }
@@ -66,7 +68,8 @@ class JuanjoModule extends Module
         //include(dirname(__FILE__).'/sql/install.php');
 
         return parent::install() &&
-            $this->registerHook('actionGetAdminOrderButtons');
+            $this->registerHook('actionGetAdminOrderButtons') &&
+            $this->registerHook('displayAdminOrderSide');
     }
 
     public function uninstall()
@@ -212,17 +215,47 @@ class JuanjoModule extends Module
 //        }
 //    }
 
-    /**
-     * Add the CSS & JavaScript files you want to be added on the FO.
-     */
-//    public function hookHeader()
-//    {
-//        $this->context->controller->addJS($this->_path.'/views/js/front.js');
-//        $this->context->controller->addCSS($this->_path.'/views/css/front.css');
-//    }
 
-    public function hookActionGetAdminOrderButtons()
+    public function hookDisplayAdminOrderSide(){
+        $this->assignTextHookDisplayAdminOrderSide();
+        return $this->display(__FILE__, 'card-odt.tpl');
+    }
+
+    public function hookActionGetAdminOrderButtons(array $params)
     {
-        echo 'Hello World';
+        //        $this->context->controller->addJS($this->_path.'/views/js/front.js');
+        //        $this->context->controller->addCSS($this->_path.'/views/css/front.css');
+        $bar = $params['actions_bar_buttons_collection'];
+
+        // Imprimir etiqueta
+        $texto = $this->l('Print label');
+        $bar->add(
+            new ActionsBarButton(
+                'btn-action',
+                ['href' => 'www.google.es'],
+                "<i class='material-icons' aria-hidden='true'>print</i> {$texto}"
+            )
+        );
+
+        // Crear ODT
+        $texto = $this->l('Create ODT');
+        $bar->add(
+            new ActionsBarButton(
+                'btn-action',
+                ['href' => 'www.google.es'],
+                "<i class='material-icons' aria-hidden='true'>description</i> {$texto}"
+            )
+        );
+
+
+    }
+
+    public function assignTextHookDisplayAdminOrderSide(){
+        $odt_titulo=$this->l('Generate ODT');
+        $odt_note=$this->l('Remember that you can generate odt in the top action buttons bar');
+        $this->context->smarty->assign([
+            'odt_titulo' => $odt_titulo,
+            'odt_note' => $odt_note,
+        ]);
     }
 }
