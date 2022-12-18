@@ -25,24 +25,19 @@
 
 <div class="panel">
 	<h3><i class="icon icon-credit-card"></i> {l s='Juanjo Test Module' mod='juanjomodule'}</h3>
+	<p><strong>{$conf_titulo}</strong></p>
 	<p>
-		<strong>{l s='Here is my new generic module!' mod='juanjomodule'}</strong><br />
-		{l s='Thanks to PrestaShop, now I have a great module.' mod='juanjomodule'}<br />
-		{l s='I can configure it using the following configuration form.' mod='juanjomodule'}
-	</p>
-	<br />
-	<p>
-		{l s='This module will boost your sales!' mod='juanjomodule'}
+		{$conf_description}
 	</p>
 </div>
 
-<div class="panel">
-	<h3><i class="icon icon-tags"></i> {l s='Documentation' mod='juanjomodule'}</h3>
-	<p>
-		&raquo; {l s='You can get a PDF documentation to configure this module' mod='juanjomodule'} :
-		<ul>
-			<li><a href="#" target="_blank">{l s='English' mod='juanjomodule'}</a></li>
-			<li><a href="#" target="_blank">{l s='French' mod='juanjomodule'}</a></li>
-		</ul>
-	</p>
-</div>
+{*<div class="panel">*}
+{*	<h3><i class="icon icon-tags"></i> {l s='Documentation' mod='juanjomodule'}</h3>*}
+{*	<p>*}
+{*		&raquo; {l s='You can get a PDF documentation to configure this module' mod='juanjomodule'} :*}
+{*		<ul>*}
+{*			<li><a href="#" target="_blank">{l s='English' mod='juanjomodule'}</a></li>*}
+{*			<li><a href="#" target="_blank">{l s='French' mod='juanjomodule'}</a></li>*}
+{*		</ul>*}
+{*	</p>*}
+{*</div>*}
