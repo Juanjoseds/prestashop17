@@ -1,4 +1,4 @@
-<div class="card mt-2 d-print-none">
+<div class="card mt-1 d-print-none">
     <div class="card-header">
         <div class="row">
             <div class="col-md-12">

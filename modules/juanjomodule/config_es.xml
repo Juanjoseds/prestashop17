@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>juanjomodule</name>
+    <displayName><![CDATA[Juanjo Test Module]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[Este es mi primer m&oacute;dulo de pruebas]]></description>
+    <author><![CDATA[Juanjo]]></author>
+    <tab><![CDATA[administration]]></tab>
+	<confirmUninstall><![CDATA[¿Está seguro que deseas desinstalar el módulo?]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

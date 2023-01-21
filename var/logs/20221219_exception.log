@@ -1,0 +1,2 @@
+*ERROR* 	v1.7.8.8	2022/12/19 - 16:50:41: Link to database cannot be established: SQLSTATE[HY000] [2002] No se puede establecer una conexi&oacute;n ya que el equipo de destino deneg&oacute; expresamente dicha conexi&oacute;n.
+ at line 137 in file classes/db/DbPDO.php

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>birthdayvoucher</name>
+    <displayName><![CDATA[Birthday Voucher]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[Send a discount coupon to the user on their birthday]]></description>
+    <author><![CDATA[Juan Jos&eacute; D&iacute;az Santana]]></author>
+    <tab><![CDATA[emailing]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>
